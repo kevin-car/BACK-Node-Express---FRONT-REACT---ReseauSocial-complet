@@ -62,8 +62,9 @@ handleDeletePhoto = () => {
 var urlcourante = document.location.href; 
 urlcourante = urlcourante.replace(/\/$/, "");
 // Gardons dans la variable queue_url uniquement la portion derrière le dernier slash de urlcourante
-const queue_url = urlcourante.substring(urlcourante.lastIndexOf( "/" )+1 );
-console.log(' Queue URL : \n'+queue_url);
+const queue_url = urlcourante.substring(urlcourante.lastIndexOf( "/" )+1 )
+console.log(' Queue URL : \n'+queue_url)
+
     // 2 Suppression de la photo dans le serveur 
     axios.get(`http://localhost:8000/deletePhotoMessage/${queue_url} `,{headers: {"x-access-token": localStorage.getItem("token"), "id": localStorage.getItem("id")} })
         .catch(error => {
@@ -75,6 +76,8 @@ console.log(' Queue URL : \n'+queue_url);
         })
     this.setState({photo : ""})
     this.setState({fileSelectedName : ""})
+    this.myFormRef.reset();
+
 }
 
     confirmerModification = () => {
@@ -163,7 +166,9 @@ console.log(' Queue URL : \n'+queue_url);
                         </div>
                         <div className="container">
                             <label htmlFor="exampleTextarea" className="form-label mt-4">Modifiez ou ajouter la photo</label>
-                            <input className="form-control" type="file"  onChange={event => this.fileSelected(event)}/>
+                            <form ref={(el) => this.myFormRef = el}>
+                                <input className="form-control" type="file" onChange={event => this.fileSelected(event)}/>
+                            </form>
                                 {this.state.photo && <img alt='photoMessage' src={`http://localhost:8000/images/${this.state.photo}` } /> }
                                 {this.state.photo && <i onClick={this.handleDeletePhoto} className="fas fa-times align-top"></i>}
                                 {this.state.fileSelected && <i class="fas fa-3x fa-long-arrow-alt-right"></i>}

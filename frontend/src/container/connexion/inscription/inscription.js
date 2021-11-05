@@ -47,7 +47,6 @@ class Inscription extends React.Component {
                 </div>
 
             <div className="container col-lg-6 col-md-10 col-sm-12">
-                <form>
                     <fieldset>
                     <div className="text-center text-success ">
                         <h2> FORMULAIRE D'INSCRIPTION</h2>
@@ -118,7 +117,6 @@ class Inscription extends React.Component {
                         </div>
  
                     </fieldset>
-                </form>
             </div>
         </>
         )
@@ -166,8 +164,7 @@ export default withFormik({
                 "photoPresentation": values.photo,
                 "sexe": values.sexe
             }   
-            // Vérifier que l'adresse mail ne soit pas déjà présente dans notre BDD 
-                    
+            // Vérifier que l'adresse mail ne soit pas déjà présente dans notre BDD           
             axios.post("http://localhost:8000/User/new", newUser)
             .then (res => {
                 console.log(res.status)

@@ -68,6 +68,10 @@ export default withFormik({
                     alert("Votre mot de passe vient d'être modifié")
                     console.log(res)
                 }
+                if(res.status === 402) {
+                    alert("Votre ancien mot de passe est incorrect")
+                    console.log(res)
+                }
             })
             .catch(error => {
                 console.log(error)

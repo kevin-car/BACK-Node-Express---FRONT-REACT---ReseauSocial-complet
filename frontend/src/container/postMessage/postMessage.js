@@ -44,17 +44,15 @@ class PostMessages extends React.Component {
 
                     </div>
                     <div className="form-group col-4">
-                            <div ref={(el) => this.myFormRef = el}>
-                                <Input type="file" onChange={event => this.fileSelected(event)}> Parcourir</Input>
-                            </div>
-                            <div ref={(el) => this.myFormRef = el}>
-                                <Bouton couleur="primary" type="button" clic={() => this.props.envoi(imageUploaded, this.myFormRef)}> Envoyer </Bouton> 
-                            </div>
-                            
+                            <form ref={(el) => this.myFormRef = el}>
+                                <Input type="file" className="form-control" id="formFile" onChange={event => this.fileSelected(event)}> Parcourir</Input>
+                            </form>
+                                <Bouton couleur="primary" type="button" clic={() => this.props.envoi(imageUploaded)}> Envoyer </Bouton>                   
                             <div className='row w-auto'>
                                 <img className="w-auto" src={this.state.fileSelected}/>
                                 {this.state.fileSelected && <i onClick={this.handleDeletePhoto} className="fas fa-times align-top"></i>}
                             </div>
+
                     </div>
                 </div>
             </form>
