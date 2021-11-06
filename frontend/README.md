@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+Auteur : Kevin CARPENTIER  
+Linkedin : https://www.linkedin.com/in/kevin-carpentier/  
+GitHub : https://github.com/kevin-car/  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projet 7 - Créez un réseau social d’entreprise
 
-## Available Scripts
+SCENARIO :    
+Vous êtes développeur depuis plus d'un an chez CONNECT-E, une petite agence web regroupant une douzaine d'employés.  
+Votre directrice, Stéphanie, invite toute l'agence à prendre un verre pour célébrer une bonne nouvelle ! Elle vient de signer un contrat pour un nouveau projet ambitieux ! 🥂  
+Le client en question est Groupomania, un groupe spécialisé dans la grande distribution et l'un des plus fidèles clients de l'agence.  
+  
+  
+Pour visualiser ce projet, il faudra installer et lancer :  
+	-  Le gestionnaire de base de donnée  
+	-  le serveur backend  
+	-  le serveur frontend
 
-In the project directory, you can run:
+### 1/ GESTIONNAIRE DE BASE DE DONNEE 
+#### //Installation
+Télécharger et installer le logiciel XAMPP : https://www.apachefriends.org/fr/index.html
+Laissez les paramètres par défault. 
+#### //Lancement
+	- Lancer le logiciel. 
+	- Aller dans l'onglet 'général', cliquer sur 'start'
+	- Aller dans l'onglet Services, cliquer sur 'Start All'
+### 2/ INSTALLATION DU SERVEUR BACKEND 
+#### //Installation
+	- Ouvrir son terminal
+	- Se placer sur le dossier backend 
+	- taper la commande 'npm install' puis appuyer entrer 
+#### //Lancement
+	- Ouvrir son terminal
+	- Se placer sur le dossier backend 
+	- taper la commande 'npm start' puis appuyer entrer 
+Vous devriez voir  ceci :  
+Listening on port 8000  
+Connexion OK !
+	
+### 3/ INSTALLATION DU SERVEUR FRONTEND 
+#### //Installation
+	- Ouvrir son terminal
+	- Se placer sur le dossier frontend 
+	- taper la commande 'npm install' puis appuyer entrer 
+#### //Lancement
+	- Ouvrir son terminal
+	- Se placer sur le dossier frontend 
+	- taper la commande 'npm start' puis appuyer entrer 
+Une onglet de votre navigateur favoris doit s'ouvrir sur le port : 3000  
+Si cela ne se produit pas : allez à cette adresse : http://localhost:3000/
+  
+Félicitation, vous êtes maintenant sur l'application WEB de Groupomania
+  
+  
+# A FAIRE LORS DU PREMIER DEMARRAGE
+## INITIALISER LA BASE DE DONNEE
+Pour l'installation sur le serveur, il faudra initialiser la base de donnée. 
+	- Entrer dans le dossier 'backend' puis le fichier app.js  
+	- Décommentez les ligne 48 et 49  
+	- Quand le message 'la base de donnée a bien été remise à zéro et syncronisée', recommentez ces mêmes lignes  
+Vous pouvez voir ces instructions en vidéo juste ici :  
+https://youtu.be/K3LDh5dTuwA
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## CRÉER LE COMPTE SUPER UTILISTEUR
+Le 1er utilisateur qui sera inscrit sera automatiquement le 'super utilisateur'. 
+Il aura le droit de supprimer et modifier n'importe quel post.  
+Tous les comptes utilisateurs peuvent être supprimés via la page profil, sauf le compte 'super utilisateur'.
+	
